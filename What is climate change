@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Causes and effects of Climate Change</title>>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 50px;
+        }
+        p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 40px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+         footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body style="background-color: #4AA32C;">
+  <h1>Causes and effects of Climate Change</h1>
+    <p>Your sustainable journey starts here.</p>
+    <h2>View our work</h2>
+    <h2>Explore Our Programs</h2>
+    
+    <div class="column">
+    <ul style="float:left">
+        <li><a href="what is sustainability">what is sustainability</a></li>
+        <li><a href="our mission">our mission</a></li>
+        <li><a href="Events/Activities">Events/Activities</a></li>   
+    </ul>
+    </div>
+    <h2 style="float: center;">Support us</h2>
+    <ul style="float: right;">
+        <li><a href="Join our campaign">Join our Campaign</a></li>
+        <li><a href="Voulenteer with us">Voulenteer with us</a></li>
+        <li><a href="Donate">Donate</a></li>
+        <li><a href="Sign the sustainability pledge">Sign the sustainability pledge</a></li>
+    </ul>
+    <hr />
+    <div style="clear:both">
+        <h4 style="float: left">Email: johnsmith67@gmail.com</h4> 
+        <h4 style="float: right">Phone: +44 7305 750406</h4>
+    </div>
+    <hr />
+    <footer>
+        <p>2026 GreenCampus. All rights reserved.</p>
+    </footer>
+    </body>
+</html>
