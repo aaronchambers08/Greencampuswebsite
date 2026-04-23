@@ -1,77 +1,259 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Causes and effects of Climate Change</title>>
+    <title>Causes and Effects of Climate Change</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            color: #fff;
-            text-align: center;
+        :root {
+            --green-dark: #1a4a0e;
+            --green-mid: #2d7a18;
+            --green-bright: #4AA32C;
+            --green-light: #7ecf58;
+            --cream: #f5f0e8;
+            --white: #ffffff;
+            --accent: #c8f57a;
         }
-        h1 {
-            font-size: 3em;
-            margin-top: 50px;
-        }
-        p {
-            font-size: 1.5em;
-            margin-bottom: 30px;
-        }
-        h2 {
-            font-size: 2em;
-            margin-top: 40px;
-        }
-        ul {
-            list-style-type: none;
+
+        * {
+            margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        li {
-            margin: 10px 0;
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--green-dark);
+            color: var(--white);
+            min-height: 100vh;
+            overflow-x: hidden;
         }
-        a {
-            color: #fff;
+
+        /* ── Hero ── */
+        .hero {
+            position: relative;
+            background: linear-gradient(160deg, var(--green-mid) 0%, var(--green-dark) 60%);
+            padding: 90px 40px 70px;
+            text-align: center;
+            border-bottom: 2px solid var(--green-bright);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 70% 30%, rgba(74,163,44,0.25) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .leaf-deco {
+            position: absolute;
+            font-size: 10rem;
+            opacity: 0.06;
+            user-select: none;
+            pointer-events: none;
+        }
+        .leaf-deco.left  { top: -20px; left: -20px; transform: rotate(-20deg); }
+        .leaf-deco.right { bottom: -20px; right: -20px; transform: rotate(160deg); }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 6vw, 4rem);
+            font-weight: 900;
+            line-height: 1.15;
+            letter-spacing: -0.5px;
+            margin-bottom: 18px;
+            position: relative;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero .tagline {
+            font-size: 1.15rem;
+            font-weight: 300;
+            color: var(--green-light);
+            letter-spacing: 0.5px;
+            position: relative;
+        }
+
+        /* ── Main container ── */
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 60px 30px 40px;
+        }
+
+        /* ── Section cards ── */
+        .section-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(74,163,44,0.3);
+            border-radius: 16px;
+            padding: 36px 40px;
+            margin-bottom: 28px;
+            transition: border-color 0.25s, background 0.25s;
+        }
+
+        .section-card:hover {
+            border-color: var(--green-bright);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .section-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-card h2 .icon {
+            font-size: 1.3rem;
+        }
+
+        /* ── Link list ── */
+        ul.link-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        ul.link-list li a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--white);
             text-decoration: none;
-            font-size: 1.2em;
+            font-size: 1.05rem;
+            font-weight: 400;
+            padding: 12px 18px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid transparent;
+            transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s;
         }
-        a:hover {
-            text-decoration: underline;
+
+        ul.link-list li a::before {
+            content: '→';
+            color: var(--green-bright);
+            font-weight: 700;
+            transition: transform 0.15s;
         }
-         footer {
-            margin-top: 50px;
-            font-size: 0.9em;
+
+        ul.link-list li a:hover {
+            background: rgba(74,163,44,0.18);
+            border-color: var(--green-bright);
+            color: var(--accent);
+            transform: translateX(4px);
+        }
+
+        ul.link-list li a:hover::before {
+            transform: translateX(3px);
+        }
+
+        /* ── Divider ── */
+        hr.divider {
+            border: none;
+            border-top: 1px solid rgba(74,163,44,0.3);
+            margin: 10px 0 28px;
+        }
+
+        /* ── Contact ── */
+        .contact-block {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(74,163,44,0.25);
+            border-radius: 16px;
+            padding: 30px 40px;
+            margin-bottom: 28px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px 40px;
+            align-items: center;
+        }
+
+        .contact-block p {
+            font-size: 0.98rem;
+            color: var(--green-light);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-block p strong {
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            padding: 28px 20px;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.35);
+            border-top: 1px solid rgba(74,163,44,0.2);
+            margin-top: 10px;
+        }
+
+        footer span {
+            color: var(--green-bright);
         }
     </style>
 </head>
-<body style="background-color: #4AA32C;">
-  <h1>Causes and effects of Climate Change</h1>
-    <p>Your sustainable journey starts here.</p>
-    <h2>View our work</h2>
-    <h2>Explore Our Programs</h2>
-    
-    <div class="column">
-    <ul style="float:left">
-        <li><a href="what is sustainability">what is sustainability</a></li>
-        <li><a href="our mission">our mission</a></li>
-        <li><a href="Events/Activities">Events/Activities</a></li>   
-    </ul>
-    </div>
-    <h2 style="float: center;">Support us</h2>
-    <ul style="float: right;">
-        <li><a href="Join our campaign">Join our Campaign</a></li>
-        <li><a href="Voulenteer with us">Voulenteer with us</a></li>
-        <li><a href="Donate">Donate</a></li>
-        <li><a href="Sign the sustainability pledge">Sign the sustainability pledge</a></li>
-    </ul>
-    <hr />
-    <div style="clear:both">
-        <h4 style="float: left">Email: johnsmith67@gmail.com</h4> 
-        <h4 style="float: right">Phone: +44 7305 750406</h4>
-    </div>
-    <hr />
+<body>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="leaf-deco left">🌿</div>
+        <div class="leaf-deco right">🌿</div>
+        <h1>Causes &amp; Effects of<br><span>Climate Change</span></h1>
+        <p class="tagline">Your sustainable journey starts here.</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Explore Our Programs -->
+        <div class="section-card">
+            <h2><span class="icon">🌱</span> Explore Our Programs</h2>
+            <ul class="link-list">
+                <li><a href="sustainability.html">What is Sustainability</a></li>
+                <li><a href="mission.html">Our Mission</a></li>
+                <li><a href="events.html">Events &amp; Activities</a></li>
+            </ul>
+        </div>
+
+        <!-- Support Us -->
+        <div class="section-card">
+            <h2><span class="icon">🤝</span> Support Us</h2>
+            <ul class="link-list">
+                <li><a href="campaign.html">Join our Campaign</a></li>
+                <li><a href="volunteer.html">Volunteer with Us</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="pledge.html">Sign the Sustainability Pledge</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <hr class="divider">
+        <div class="contact-block">
+            <p>📧 <strong>Email:</strong> johnsmith67@gmail.com</p>
+            <p>📞 <strong>Phone:</strong> +44 7305 750406</p>
+        </div>
+        <hr class="divider">
+
+    </main>
+
+    <!-- Footer -->
     <footer>
-        <p>2026 GreenCampus. All rights reserved.</p>
+        <p>&copy; 2026 <span>GreenCampus</span>. All rights reserved.</p>
     </footer>
-    </body>
+
+</body>
 </html>
