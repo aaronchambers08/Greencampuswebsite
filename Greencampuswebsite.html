@@ -1,78 +1,186 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenCampus</title>>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            color: #fff;
-            text-align: center;
-        }
-        h1 {
-            font-size: 3em;
-            margin-top: 50px;
-        }
-        p {
-            font-size: 1.5em;
-            margin-bottom: 30px;
-        }
-        h2 {
-            font-size: 2em;
-            margin-top: 40px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 10px 0;
-        }
-        a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2em;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-         footer {
-            margin-top: 50px;
-            font-size: 0.9em;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenCampus</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #000000;
+    text-align: center;
+    background-color: #e2dbbb;
+}
+
+h1 {
+    font-size: 3em;
+    margin-top: 50px;
+}
+
+p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 40px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #340;
+  position: flex;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: #aeb784;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 60px;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 48px;
+  font-family: serif;
+  font-weight: bold;
+}
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button1 {
+    background-color: #aeb784;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 12px;
+}
+
+.button2 {
+    background-color: #aeb784;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 12px;
+}
+
+</style>
 </head>
-<body style="background-color: #4AA32C;">
-  <h1>Welcome to GreenCampus</h1>
-    <p>Your sustainable journey starts here.</p>
-    <h2>View our work</h2>
-    <h2>Explore Our Programs</h2>
-    
-    <div class="column">
-    <ul style="float:left">
-        <li><a href="what is sustainability">what is sustainability</a></li>
-        <li><a href="causes and effects of climate change">Causes and Effects of Climate Change</a></li>
-        <li><a href="our mission">our mission</a></li>
-        <li><a href="Events/Activities">Events/Activities</a></li>   
-    </ul>
-    </div>
-    <h2 style="float: center;">Support us</h2>
-    <ul style="float: right;">
-        <li><a href="Join our campaign">Join our Campaign</a></li>
-        <li><a href="Voulenteer with us">Voulenteer with us</a></li>
-        <li><a href="Donate">Donate</a></li>
-        <li><a href="Sign the sustainability pledge">Sign the sustainability pledge</a></li>
-    </ul>
-    <hr />
-    <div style="clear:both">
-        <h4 style="float: left">Email: johnsmith67@gmail.com</h4> 
-        <h4 style="float: right">Phone: +44 7305 750406</h4>
-    </div>
-    <hr />
-    <footer>
-        <p>2026 GreenCampus. All rights reserved.</p>
-    </footer>
-    </body>
+
+<body>
+
+<div class="navbar">
+  <a href="#sustainability">What is sustainability?</a>
+  <a href="#climate">Causes and Effects of Climate Change</a>
+  <a href="#mission">Our Mission</a>
+  <a href="#events">Events/Activities</a>
+</div>
+
+<div class="main">
+
+<div class="container">
+  <img src="https://static.vecteezy.com/system/resources/thumbnails/057/779/637/small/majestic-mountain-ridge-trail-lush-green-forest-foggy-landscape-scenic-view-photo.jpeg" alt="Scenery" style="width:100%;"height="400px">
+  <div class="top-left">Welcome to GreenCampus</div>
+  <div class="centered" style="font-size: 24px;">View our work</div>
+</div>
+
+<div style="padding: 20px;">
+  <p>Your sustainable journey starts here.</p>
+</div>
+
+<h2 id="mission">Support us</h2>
+
+<ul style="float: left;">
+    <li><Button class="button1"><a href="#Join">Join our Campaign</a></Button></li>
+    <li><Button class="button1"><a href="#Volunteer">Volunteer with us</a></Button></li>
+    <li><Button class="button1"><a href="#Donate">Donate</a></Button></li>
+    <li><Button class="button1"><a href="#Pledge">Sign the sustainability pledge</a></Button></li>
+</ul>
+<img src="C:\Users\30276415\OneDrive - Burton & South Derbyshire College\Pictures\Camera Roll\Bike_on_stone_wall_in_nature.png" alt="Bike in nature" style="width:100%;">
+<hr />
+
+<div style="clear:both">
+</div>
+
+<h3 style="text-align: left;">Add Our socials here:</h3>
+<ul style="float: left;">
+    <li><button class="button2"><a href="#Facebook">Facebook</a></button></li>
+    <li><button class="button2"><a href="#Twitter">Twitter</a></button></li>
+    <li><button class="button2"><a href="#Instagram">Instagram</a></button></li>
+    <li><button class="button2"><a href="#Tiktok">TikTok</a></button></li>
+</ul>
+
+</div>
+
+<hr />
+<footer>
+    <p>phone: +44 7305 750406</p>
+    <p>email: johnsmith67@gmail.com</p>
+    <p>2026 GreenCampus. All rights reserved.</p>
+</footer>
+</body>
 </html>
