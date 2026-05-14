@@ -8,7 +8,7 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: georgia,serif;
     color: #000000;
     text-align: center;
     background-color: #e2dbbb;
@@ -56,20 +56,33 @@ footer {
 .navbar {
     background-color: #9ea776;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     padding: 20px 0;
     font-size: 22px;
+    gap: 20px;
 }
- 
+
 .navbar a {
+    position: relative;
     text-decoration: none;
     color: black;
     padding: 0 20px;
-    border-right: 2px solid black;
+    display: flex;
+    align-items: center;
 }
- 
-.navbar a:last-child {
-    border-right: none;
+
+.navbar a:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: normal;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
 }
 .main {
   padding: 16px;
@@ -126,7 +139,7 @@ footer {
   background-color: #aeb784; 
   border: 1px solid #000000; 
   color: #000000; 
-  padding: 10px 44px; 
+  padding: 1px 2px; 
   cursor: pointer; 
   float: left; 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -137,6 +150,7 @@ footer {
   clear: both;
   display: table;
 }
+
 .btn-group button:not(:last-child) {
   border-right: 0px solid #000000; 
 }
@@ -172,6 +186,12 @@ footer {
   border-radius: 25px;
   border-color: #000000;
   border-width: 5px;
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 0.9em;
+    text-align: center;
 }
 </style>
 </head>
@@ -215,24 +235,30 @@ footer {
 
 <h3 style="text-align: left;">Add Our socials here:</h3>
 <div class="btn-group">
-  <button class="button2">instagram</button>
-  <button class="button2">twitter</button>
-  <button class="button2">facebook</button>
-  <button class="button2">tiktok</button>
+  <button class="button2">
+    <img src="vecteezy_instagram-logo-png-instagram-icon-transparent_18930415.png" alt="Instagram" width="50px" height="50px">
+  </button>
+  <button class="button2">
+    <img src="vecteezy_twitter-logo-png-twitter-icon-transparent-free-png_18930745.png" alt="Twitter" width="50px" height="50px">
+  </button>
+  <button class="button2">
+    <img src="vecteezy_facebook-logo-png-facebook-icon-transparent-png_18930698.png" alt="Facebook" width="50px" height="50px">
+  </button>
+  <button class="button2">
+    <img src="vecteezy_tiktok-logo-png-tikok-icon-transparent-png-tikok-app-logo-png_18930463.png" alt="TikTok" width="50px" height="50px">
+  </button>
 </div>
 
-
 <h3>Enter your email here to subscribe to our newsletter:</h3>
-<form action="/action_page.php">
+<form>
   <label for="email">Email:</label>
   <input type="email" id="email" name="email">
   <input type="submit">
 </form>
 
-
 <hr />
 <footer>
-    <p>phone: +44 7305 750406</p>
+    <p>phone: +44 0800 7474</p>
     <p>email: GreenCampus@gmail.com</p>
     <p>copyright &copy; 2026 GreenCampus. All rights reserved.</p>
 </footer>

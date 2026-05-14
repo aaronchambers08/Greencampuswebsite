@@ -9,27 +9,40 @@
 body {
     margin: 0;
     font-family: Georgia, serif;
-    background-color: #cfc6a4;
+    background-color: #e2dbbb;
 }
  
 /* NAVBAR */
 .navbar {
     background-color: #9ea776;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     padding: 20px 0;
     font-size: 22px;
+    gap: 20px;
 }
- 
+
 .navbar a {
+    position: relative;
     text-decoration: none;
     color: black;
     padding: 0 20px;
-    border-right: 2px solid black;
+    display: flex;
+    align-items: center;
 }
- 
-.navbar a:last-child {
-    border-right: none;
+
+.navbar a:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: normal;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
 }
  
 /* MAIN CONTAINER */
@@ -88,6 +101,35 @@ body {
     align-items: center;
 }
  
+
+.button2 {
+    background-color: #aeb784;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 12px;
+}
+.btn-group button {
+  background-color: #aeb784; 
+  border: 1px solid #000000; 
+  color: #000000; 
+  padding: 1px 2px; 
+  cursor: pointer; 
+  float: left; 
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.btn-group button:not(:last-child) {
+  border-right: 0px solid #000000; 
+}
+
+.btn-group button:hover {
+  background-color: #334400;
+}
 .socials img {
     width: 40px;
     margin-right: 10px;
@@ -95,6 +137,12 @@ body {
  
 .footer-text {
     font-size: 22px;
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 0.9em;
+    text-align: center;
 }
  
 </style>
@@ -143,27 +191,26 @@ body {
  
 </div>
  
-<!-- FOOTER -->
-<div class="footer">
-    <h2>GreenCampus Socials:</h2>
- 
-    <div class="footer-content">
-        <div class="socials">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png">
-        </div>
- 
-        <div class="footer-text">
-            Email: GreenCampus@gmail.com
-        </div>
- 
-        <div class="footer-text">
-            Number: +44 0800 7474
-        </div>
-    </div>
+<h3 style="text-align: left;">Add Our socials here:</h3>
+<div class="btn-group">
+  <button class="button2">
+    <img src="vecteezy_instagram-logo-png-instagram-icon-transparent_18930415.png" alt="Instagram" width="50px" height="50px">
+  </button>
+  <button class="button2">
+    <img src="vecteezy_twitter-logo-png-twitter-icon-transparent-free-png_18930745.png" alt="Twitter" width="50px" height="50px">
+  </button>
+  <button class="button2">
+    <img src="vecteezy_facebook-logo-png-facebook-icon-transparent-png_18930698.png" alt="Facebook" width="50px" height="50px">
+  </button>
+  <button class="button2">
+    <img src="vecteezy_tiktok-logo-png-tikok-icon-transparent-png-tikok-app-logo-png_18930463.png" alt="TikTok" width="50px" height="50px">
+  </button>
 </div>
- 
+<hr /> 
+ <footer style="font-size: 22px;">
+    <p>phone: +44 0800 7474</p>
+    <p>email: GreenCampus@gmail.com</p>
+    <p>copyright &copy; 2026 GreenCampus. All rights reserved.</p>
+</footer>
 </body>
 </html> 
